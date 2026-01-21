@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aroma & Grano | Café de Especialidad</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="l-header">
+    <div class="l-container l-flex-between">
+        <div class="brand">Aroma & Grano</div>
+        <nav>
+            <a href="#inicio" class="nav-link is-active">Inicio</a>
+            <a href="#favoritos" class="nav-link">Favoritos</a>
+            <a href="#contacto" class="nav-link">Contacto</a>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO -->
+<section id="inicio" class="hero">
+    <div class="l-container">
+        <h1 class="hero-title">El arte del café en tu taza</h1>
+        <p class="hero-subtitle">Granos seleccionados de altura</p>
+        <a href="#" class="btn btn-primary">Ver Menú</a>
+    </div>
+</section>
+
+<!-- FAVORITOS -->
+<section id="favoritos" class="l-section">
+    <div class="l-container">
+        <h2 class="section-title">Nuestros Favoritos</h2>
+
+        <div class="l-grid-3">
+
+            <article class="card">
+                <div class="card-image" style="background-color:#d7ccc8;">☕</div>
+                <div class="card-content">
+                    <h3 class="card-title">Espresso Romano</h3>
+                    <p class="card-desc">Intenso con limón siciliano.</p>
+                    <button class="btn btn-small">Pedir</button>
+                </div>
+            </article>
+
+            <article class="card is-highlighted">
+                <div class="card-badge">Best Seller</div>
+                <div class="card-image" style="background-color:#a1887f;">☕✨</div>
+                <div class="card-content">
+                    <h3 class="card-title">Flat White</h3>
+                    <p class="card-desc">Doble shot con leche fina.</p>
+                    <button class="btn btn-small">Pedir</button>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-image" style="background-color:#d7ccc8;">🧊</div>
+                <div class="card-content">
+                    <h3 class="card-title">Cold Brew</h3>
+                    <p class="card-desc">Macerado 24 horas.</p>
+                    <button class="btn btn-small">Pedir</button>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="l-section">
+    <div class="l-container">
+        <h2>Contacto</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Nombre">
+            <input type="email" placeholder="Correo">
+            <textarea placeholder="Mensaje"></textarea>
+            <button class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+</section>
+
+<footer class="l-footer">
+    <div class="l-container">
+        <p>&copy; 2024 Aroma & Grano</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
