@@ -48,4 +48,38 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+        // ---------------------------------------------
+        // 3. SLIDER SIMPLE (Testimonios)
+        // ---------------------------------------------
+        const track = document.querySelector('.testimonials-track');
+        if (track) {
+            const items = Array.from(track.querySelectorAll('.testimonial-item'));
+            let index = 0;
+            const gap = parseInt(getComputedStyle(track).gap) || 24;
+
+            const advance = () => {
+                if (items.length === 0) return;
+                const itemWidth = items[0].getBoundingClientRect().width + gap;
+                index = (index + 1) % items.length;
+                track.style.transform = `translateX(-${index * itemWidth}px)`;
+            };
+
+            let interval = setInterval(advance, 3000);
+
+            const sliderContainer = track.closest('.testimonials-slider');
+            if (sliderContainer) {
+                sliderContainer.addEventListener('mouseenter', () => clearInterval(interval));
+                sliderContainer.addEventListener('mouseleave', () => {
+                    clearInterval(interval);
+                    interval = setInterval(advance, 3000);
+                });
+            }
+
+            window.addEventListener('resize', () => {
+                if (items.length === 0) return;
+                const itemWidth = items[0].getBoundingClientRect().width + gap;
+                track.style.transform = `translateX(-${index * itemWidth}px)`;
+            });
+        }
+
 });
